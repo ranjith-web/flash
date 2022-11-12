@@ -10,11 +10,11 @@ app.use(express.static(path.join(__dirname, "node_modules/axios/dist/")));
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/js/build.js',function(req,res){
-    res.sendFile(path.join(__dirname + '/client/public/bundle.js')); 
+    res.sendFile(path.join(__dirname + '/public/bundle.js')); 
 });
 
 app.get('/styles.css',function(req,res){
