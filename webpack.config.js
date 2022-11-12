@@ -11,11 +11,6 @@ var config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: '/index.html'
-    })
-  ],
   module: {
     rules: [
       {
