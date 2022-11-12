@@ -4,7 +4,6 @@ import Loader from '../Shared/Loader/index.jsx';
 import ArticleList from './List.jsx';
 
 const Articles = () => {
-
     const selectedSources = (window.localStorage.selectedSources ?? "hacker-news,product-hunt,techcrunch").split(",");
     const datasources = [
         { sourceType: "hacker-news", sourceLabel: "Hacker News", color: "#FF6600" },
@@ -46,15 +45,15 @@ const Articles = () => {
     const formatDate = (dateString) => {
         const seconds = Math.floor((new Date() - new Date(dateString)) / 1000);
         let interval = seconds / 31536000;
-        if (interval > 1) return Math.floor(interval) + "Y";
+        if (interval > 1){ return Math.floor(interval) + "Y" };
         interval = seconds / 2592000;
-        if (interval > 1) return Math.floor(interval) + "M";
+        if (interval > 1){ return Math.floor(interval) + "M" };
         interval = seconds / 86400;
-        if (interval > 1) return Math.floor(interval) + "d";
+        if (interval > 1){ return Math.floor(interval) + "d" };
         interval = seconds / 3600;
-        if (interval > 1) return Math.floor(interval) + "h";
+        if (interval > 1){ return Math.floor(interval) + "h" };
         interval = seconds / 60;
-        if (interval > 1) return Math.floor(interval) + "m";
+        if (interval > 1){ return Math.floor(interval) + "m" };
         return "now";
     };
 
@@ -70,9 +69,7 @@ const Articles = () => {
         setShowAll(true);
     }
 
-
-
-    return (
+    return(
         <section >
             {loading ? 
                 <Loader />
