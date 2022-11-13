@@ -174,6 +174,9 @@ const supportedSources = [
 	{ sourceType: "medium-technology", sourceLabel: "Medium", fetcher: fetchMediumTechnology },
 ];
 
-app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
+var server = app.listen(port, () => {
+	const currentPort = server.address().port;
+	console.log(`Express is working on port ${currentPort}`);
+});
 
 module.exports = app;
