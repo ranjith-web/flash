@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
+    "start-server": "node server.js",
     "dev": "concurrently npm:start webpack --config webpack.dev.js -w",
     "build": "webpack --config webpack.prod.js",
-    "start:dev": "concurrently npm:build npm:start"
+    "start:dev": "concurrently npm:build npm:start",
+    "start:prod": "npm run build; npm run start-server"
   },
   "repository": {
     "type": "git",
