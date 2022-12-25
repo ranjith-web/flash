@@ -10,7 +10,8 @@
     "dev": "concurrently npm:start webpack --config webpack.dev.js -w",
     "build": "webpack --config webpack.prod.js",
     "start:dev": "concurrently npm:build npm:start",
-    "start:prod": "npm run build; npm run start-server"
+    "start:prod": "npm run build; npm run start-server",
+    "live": "concurrently \"npm run build\" \"npm run start-server\""
   },
   "repository": {
     "type": "git",
