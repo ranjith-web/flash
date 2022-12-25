@@ -8,8 +8,7 @@
     "start": "nodemon server.js",
     "dev": "concurrently npm:start webpack --config webpack.dev.js -w",
     "build": "webpack --config webpack.prod.js",
-    "start:dev": "concurrently npm:build npm:start",
-    "prod": "webpack --config webpack.prod.js -w"
+    "start:dev": "concurrently npm:build npm:start"
   },
   "repository": {
     "type": "git",
